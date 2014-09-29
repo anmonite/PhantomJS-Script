@@ -12,7 +12,7 @@ Example for use:  (can get Flash images with using Xvfb)
 
 $ Xvfb :99 -screen 0 1280x1024x24 2> /dev/null &
 
-$ DISPLAY=:99 --load-plugins=true --ignore-ssl-errors=yes web-capture.js [view-width] [UserAgent-strings] [TargetURL] [output-filepath]
+$ DISPLAY=:99 phantomjs --load-plugins=true --ignore-ssl-errors=yes web-capture.js [view-width] [UserAgent-strings] [TargetURL] [output-filepath]
 
 $ ps -ef | grep Xvfb | grep -v grep | awk '{ print $2; }' | kill 'SIGTERM'
 
